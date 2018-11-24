@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    background: #545659;
+    font: 15px 'Montserrat', sans-serif;
+}
+
+/* ----- STYLING THE HEADER PART OF THE SITE ----- */
+/* header is a 4 cols grid with logo (1 col) and nav (3 cols) */
+header{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #178188;
+    color: #ffffff;
+    height: 10vh;    
+}
+
+/* making header sticky to the top */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+header .logo{
+    grid-column: 1;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: white;
+    /* flex used to centerize the content*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo:hover{
+    background: #259fa8;
+}
+
+header nav{
+    grid-column: 2 / 5;
+    height: 100%;
+    background: #177188;
+    padding-right: 10px;
+}
+
+header nav > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+}
+
+header nav > ul > li > a{
+    display: block;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header nav > ul > li > a:hover{
+    border-bottom: 2px solid #ffffff;
+}
+
+/* ----- STYLING THE BANNER PART OF THE SITE ----- */
+
+/* ----- STYLING THE MAIN PART OF THE SITE ----- */
+
+/* ----- STYLING THE SLIDER PART OF THE SITE ----- */
+
+/* ----- STYLING THE DOWN SECTION PART OF THE SITE ----- */
+
+/* ----- STYLING THE FOOTER PART OF THE SITE ----- */
