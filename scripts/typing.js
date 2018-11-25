@@ -24,7 +24,7 @@ function typeWriter() {
             myIndex++;
             txtElements[myIndex].classList.add('typing');
             currentPosition = 0;
-            setTimeout("typeWriter()", 500);
+            setTimeout("typeWriter()", 400);
         }
     }
 }

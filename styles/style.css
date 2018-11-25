@@ -6,7 +6,7 @@
 }
 
 :root{
-    background: #545659;
+    background: #dfdfdf;
     font: 15px 'Montserrat', sans-serif;
 }
 
@@ -113,7 +113,75 @@ h1:empty::before{content: "\00a0"}
     position: absolute;
     bottom: 20px;
 }
+
+/* ----- STYLING THE FIRST QUOTE PART OF THE SITE ----- */
+.first-quote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e4856;
+    color: #ffffff;
+    padding: 3rem 0; 
+    font: 1.5rem 'Sedgwick Ave', cursive;
+}
+
 /* ----- STYLING THE MAIN PART OF THE SITE ----- */
+/* styling all the articles (size) */
+main article{
+    height: 60vh;
+    display: flex;
+    padding: 2rem 0;
+}
+
+main article:nth-child(even){
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+main article .article-photo{
+    flex-basis: 40%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* setting photos to articles */
+main article .artPic1{background-image: url(../images/articles/1.jpg)}
+main article .artPic2{background-image: url(../images/articles/2.jpg)}
+main article .artPic3{background-image: url(../images/articles/3.jpg)}
+main article .artPic4{background-image: url(../images/articles/4.jpg)}
+
+/* styling article content section with header, paragraph and btn */
+main article .article-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 60%;
+    padding: 0 1rem;
+}
+
+/* styling the text part of the content (h2 + p) */
+main article .article-content h2{
+    letter-spacing: .2rem;
+    font-size: 2rem;
+}
+
+main article .article-content p{margin-top: 1rem}
+
+/* styling the 'more' button */
+main article .article-content .btn-container{margin-top: 1rem}
+
+main article .article-content .more-btn{
+    display: inline-block;
+    padding: 1rem;
+    background-color: #0e4856;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color .3s;
+}
+
+main article .article-content .more-btn:hover{
+    background-color: #177188;
+}
 
 /* ----- STYLING THE SLIDER PART OF THE SITE ----- */
 
