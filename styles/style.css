@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: normal;
 }
 
 :root{
@@ -28,6 +29,7 @@ header{
     z-index: 100;
 }
 
+/* logo as link to main (top) */
 header .logo{
     grid-column: 1;
     height: 100%;
@@ -38,23 +40,25 @@ header .logo{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background .3s;
 }
 
 header .logo:hover{
     background: #259fa8;
 }
 
+/* navigation bar */
 header nav{
     grid-column: 2 / 5;
     height: 100%;
     background: #177188;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 header nav > ul{
     list-style-type: none;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
 }
@@ -65,6 +69,7 @@ header nav > ul > li > a{
     border-bottom: 2px solid transparent;
     text-decoration: none;
     color: #ffffff;
+    transition: border .3s;
 }
 
 header nav > ul > li > a:hover{
@@ -72,7 +77,42 @@ header nav > ul > li > a:hover{
 }
 
 /* ----- STYLING THE BANNER PART OF THE SITE ----- */
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    margin-top: 10vh;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
 
+.banner hgroup{
+    width: 80%;
+    margin: auto;
+}
+
+/* writing an 0 width character to both headers in banner */
+h1:empty::before{content: "\00a0"}
+
+/* headers have to be inline to the cursor effect element */
+.banner hgroup h1{display: inline}
+
+/* Size of font on the header on desktop version */
+.banner .text-type-first{font-size: 6rem}
+.banner .text-type-second{font-size: 2rem}
+
+/* Class created to typing effect animation */
+.banner .typing{border-right: .15rem solid #292929}
+
+.go-down-btn{
+    position: absolute;
+    bottom: 20px;
+}
 /* ----- STYLING THE MAIN PART OF THE SITE ----- */
 
 /* ----- STYLING THE SLIDER PART OF THE SITE ----- */
