@@ -184,7 +184,65 @@ main article .article-content .more-btn:hover{
 }
 
 /* ----- STYLING THE SLIDER PART OF THE SITE ----- */
+.quote-slider{
+    background-color: #0e4856;
+    color: #ffffff;
+    height: 40vh;
+    position: relative;
+    overflow: hidden;
+}
 
-/* ----- STYLING THE DOWN SECTION PART OF THE SITE ----- */
+/* container to slides */
+.quote-slider .slides{
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+.slide{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.go-forward{
+    left: -200% !important;
+    transition: left .8s;
+}
+
+.go-back{
+    left: 0 !important;
+    transition: left .8s;
+}
+
+.slide:nth-child(2){
+    left: 100%;
+}
+
+.slide:nth-child(3){
+    left: 200%;
+}
+
+/* styling the arrows (relative to .quote-silder) */
+.arrow{
+    position: absolute;
+    top: calc(50% - 1rem);
+    font-size: 2rem;
+    transition: color .2s;
+}
+
+.arrow:hover{
+    color: #cccccc;
+    cursor: pointer;
+}
+
+#arrowLeft{left: 5vw}
+#arrowRight{right: 5vw}
+/* ----- STYLING THE BLOG PART OF THE SITE ----- */
 
 /* ----- STYLING THE FOOTER PART OF THE SITE ----- */

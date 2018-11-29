@@ -8,6 +8,7 @@
     <title>One Page Website</title>
 
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fontello.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
 </head>
@@ -91,9 +92,30 @@
             </section>
         </article>
     </main>
-    <div class="quote-slider"></div>
+    <div class="quote-slider">
+        <div class="slides" id="mySlider">
+            <div class="slide">
+                <q>(1)Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                    diam.</q>
+            </div>
+            <div class="slide">
+                <q>(2)Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu
+                    erat.</q>
+            </div>
+            <div class="slide">
+                <q>(3)Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</q>
+            </div>
+        </div>
+        <div id="arrowLeft" class="arrow"><i class="icon-left-open"></i></div>
+        <div id="arrowRight" class="arrow"><i class="icon-right-open"></i></div>
+        <section class="stage-btns" style="display: none">
+            <button id="slideBtn1" class="active-btn"></button>
+            <button id="slideBtn2" class="empty-btn"></button>
+            <button id="slideBtn3" class="empty-btn"></button>
+        </section>
+    </div>
     <!-- Articles under the quote slider (the less important) -->
-    <section class="down-articles"></section>
+    <section class="blog"></section>
     <footer>
         <div class="main-footer">
             <section class="contact-info"></section>
@@ -105,6 +127,7 @@
         </div>
     </footer>
     <script src="scripts/typing.js"></script>
+    <script src="scripts/quote-slider.js"></script>
 </body>
 
 </html>
