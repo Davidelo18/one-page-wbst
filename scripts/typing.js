@@ -15,12 +15,13 @@ const delayTime = [300, 90];
 function typeWriter() {
     let visibleWord = words[myIndex].substring(0, currentPosition);
     txtElements[myIndex].textContent = visibleWord;
+
     if (currentPosition < words[myIndex].length) {
         currentPosition++;
         setTimeout("typeWriter()", delayTime[myIndex]);
     } else {
         txtElements[myIndex].classList.remove('typing');
-        if(myIndex < words.length){
+        if(myIndex < words.length - 1){
             myIndex++;
             txtElements[myIndex].classList.add('typing');
             currentPosition = 0;

@@ -185,6 +185,9 @@ main article .article-content .more-btn:hover{
 
 /* ----- STYLING THE SLIDER PART OF THE SITE ----- */
 .quote-slider{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     background-color: #0e4856;
     color: #ffffff;
     height: 40vh;
@@ -201,7 +204,8 @@ main article .article-content .more-btn:hover{
     left: -100%;
 }
 
-.slide{
+/* styling each slide */
+.quote-slider .slides .slide{
     width: 100%;
     height: 40vh;
     display: flex;
@@ -210,6 +214,11 @@ main article .article-content .more-btn:hover{
     position: absolute;
 }
 
+/* starting styles of slides number 2 and 3 */
+.slide:nth-child(2){left: 100%}
+.slide:nth-child(3){left: 200%}
+
+/* classes used as animation to slide change */
 .go-forward{
     left: -200% !important;
     transition: left .8s;
@@ -220,13 +229,22 @@ main article .article-content .more-btn:hover{
     transition: left .8s;
 }
 
-.slide:nth-child(2){
-    left: 100%;
+/* buttons to slides */
+.quote-slider .stage-btns{
+    padding: 15px 0;
 }
 
-.slide:nth-child(3){
-    left: 200%;
+.quote-slider .stage-btns .slide-button{
+    padding: 10px;
+    border: .2rem solid #259fa8;
+    border-radius: 50%;
+    transition: background-color .5s;
 }
+
+.quote-slider .stage-btns .active-btn{
+    background-color: #259fa8;
+}
+
 
 /* styling the arrows (relative to .quote-silder) */
 .arrow{
@@ -243,6 +261,74 @@ main article .article-content .more-btn:hover{
 
 #arrowLeft{left: 5vw}
 #arrowRight{right: 5vw}
+
 /* ----- STYLING THE BLOG PART OF THE SITE ----- */
+.blog{
+    width: 90%;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+/* container to all aricles diplays as grid */
+.blog .blog-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2vw;
+    grid-row-gap: 20px;
+}
+
+/* image + title + text is a link to blog article */
+.blog .link-to-blog{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000000;
+    transition: all .7s;
+    border: 3px solid #dfdfdf;
+}
+
+/* link to blog on hover (with image animation) */
+.blog .link-to-blog:hover{
+    background-color: #178188;
+    border-color: #178188;
+}
+
+.blog .link-to-blog:hover .blog-img{
+    border-color: #178188;
+    transform: scale(1.2) rotate(-3deg);
+}
+
+/* container needed for transform scale */
+.blog .image-container{overflow: hidden}
+
+/* styling things inside a blog (image, title and text) */
+.blog .blog-img{
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    transition: all .7s;
+}
+
+.blog .blog-title{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.blog .blog-content{
+    padding: 10px;
+}
+
+/* setting images to each blog link */
+.blogpic1{background-image: url(../images/blog/1.jpg)}
+.blogpic2{background-image: url(../images/blog/2.jpg)}
+.blogpic3{background-image: url(../images/blog/3.jpg)}
+.blogpic4{background-image: url(../images/blog/4.jpg)}
+.blogpic5{background-image: url(../images/blog/5.jpg)}
+.blogpic6{background-image: url(../images/blog/6.jpg)}
 
 /* ----- STYLING THE FOOTER PART OF THE SITE ----- */
+footer{
+    background-color: #041f26;
+    color: #ffffff;
+}
