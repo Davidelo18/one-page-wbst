@@ -8,6 +8,13 @@
 :root{
     background: #dfdfdf;
     font: 15px 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+ul{list-style-type: none}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* ----- STYLING THE HEADER PART OF THE SITE ----- */
@@ -16,7 +23,6 @@ header{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     background: #178188;
-    color: #ffffff;
     height: 10vh;    
 }
 
@@ -34,8 +40,6 @@ header .logo{
     grid-column: 1;
     height: 100%;
     display: block;
-    text-decoration: none;
-    color: white;
     /* flex used to centerize the content*/
     display: flex;
     align-items: center;
@@ -67,8 +71,6 @@ header nav > ul > li > a{
     display: block;
     padding: 10px;
     border-bottom: 2px solid transparent;
-    text-decoration: none;
-    color: #ffffff;
     transition: border .3s;
 }
 
@@ -87,7 +89,6 @@ header nav > ul > li > a:hover{
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-position: center;
-    color: #ffffff;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -120,7 +121,6 @@ h1:empty::before{content: "\00a0"}
     justify-content: center;
     align-items: center;
     background-color: #0e4856;
-    color: #ffffff;
     padding: 3rem 0; 
     font: 1.5rem 'Sedgwick Ave', cursive;
 }
@@ -157,6 +157,7 @@ main article .article-content{
     justify-content: center;
     flex-basis: 60%;
     padding: 0 1rem;
+    color: #000000;
 }
 
 /* styling the text part of the content (h2 + p) */
@@ -174,7 +175,6 @@ main article .article-content .more-btn{
     display: inline-block;
     padding: 1rem;
     background-color: #0e4856;
-    text-decoration: none;
     color: #ffffff;
     transition: background-color .3s;
 }
@@ -189,7 +189,6 @@ main article .article-content .more-btn:hover{
     justify-content: center;
     align-items: flex-end;
     background-color: #0e4856;
-    color: #ffffff;
     height: 40vh;
     position: relative;
     overflow: hidden;
@@ -267,6 +266,7 @@ main article .article-content .more-btn:hover{
     width: 90%;
     margin: 20px auto;
     text-align: justify;
+    color: #000000;
 }
 
 /* container to all aricles diplays as grid */
@@ -281,8 +281,6 @@ main article .article-content .more-btn:hover{
 .blog .link-to-blog{
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    color: #000000;
     transition: all .7s;
     border: 3px solid #dfdfdf;
 }
@@ -330,5 +328,47 @@ main article .article-content .more-btn:hover{
 /* ----- STYLING THE FOOTER PART OF THE SITE ----- */
 footer{
     background-color: #041f26;
-    color: #ffffff;
+    font-size: .8rem;
+    text-align: center;
+}
+
+footer .main-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 5%;
+}
+
+footer .contact-info li:nth-child(3){
+    margin-top: 1rem;
+}
+
+footer .map-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    height: 35vh;
+}
+
+footer .open-street-map{
+    height: 35vh;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+footer .openstreetmap-link{
+    font-size: .7rem;
+    margin-top: .5rem;
+}
+
+footer .openstreetmap-link:hover,
+footer .compulsory-files a:hover{
+    text-decoration: underline;
+}
+
+/* down part (all rights reserved) of the footer */
+footer .down-footer{
+    background-color: #000000;
+    text-align: center;
+    padding: 5px 0;
 }
