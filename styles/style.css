@@ -50,6 +50,8 @@ header .logo:hover{
     background: #259fa8;
 }
 
+header .burger-btn{display: none}
+
 /* navigation bar */
 header nav{
     grid-column: 2 / 5;
@@ -59,7 +61,6 @@ header nav{
 }
 
 header nav > ul{
-    list-style-type: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -125,7 +126,6 @@ h1:empty::before{content: "\00a0"}
 /* ----- STYLING THE MAIN PART OF THE SITE ----- */
 /* styling all the articles (size) */
 main article{
-    
     display: flex;
     padding: 2rem 0;
 }
