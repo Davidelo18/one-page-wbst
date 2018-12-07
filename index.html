@@ -16,21 +16,21 @@
 
 <body>
     <!-- Header and banner are taking 100% vh together -->
-    <header class="sticky">
+    <header class="sticky" id="header">
         <a class="logo" href="#">myLogo</a>
         <div class="burger-btn" id="burgerBtn">
             <i class="icon-menu"></i>
         </div>
         <nav id="myNav">
             <ul>
-                <li><a href="#">Strona Główna</a></li>
-                <li><a href="#">Nasze Produkty</a></li>
-                <li><a href="#">Inne firmy</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#" id="goTop">Strona Główna</a></li>
+                <li><a href="#" id="goArticles">Nasze Produkty</a></li>
+                <li><a href="#" id="goBlog">Blog</a></li>
+                <li><a href="#" id="goFooter">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    <div class="banner">
+    <div class="banner" id="banner">
         <hgroup>
             <h1 class="text-type-first typing"></h1>
             <br>
@@ -42,7 +42,7 @@
         Join us today! Create the future!
     </div>
     <!-- main part of the site includes the articles most connested with main page topic -->
-    <main>
+    <main id="mainPart">
         <article>
             <section class="article-photo artPic1"></section>
             <div class="block-div">
@@ -137,7 +137,7 @@
         </section>
     </div>
     <!-- Articles under the quote slider (less important for page) -->
-    <section class="blog">
+    <section class="blog" id="blog">
         <div class="blog-grid">
             <article class="blog-art">
                 <a href="#" class="link-to-blog">
@@ -209,7 +209,7 @@
             </article>
         </div>
     </section>
-    <footer>
+    <footer id="footer">
         <div class="main-footer">
             <section class="contact-info">
                 <ul>
@@ -223,8 +223,7 @@
             <section class="map-location">
                 <div id="map" class="map-container">
                     <iframe class="open-street-map" src="https://www.openstreetmap.org/export/embed.html?bbox=20.875740051269535%2C52.17182615932842%2C21.138725280761722%2C52.29315247235573&amp;layer=mapnik&amp;marker=52.23253076579537%2C21.007232666015625"></iframe>
-                    <a class="openstreetmap-link" href="https://www.openstreetmap.org/?mlat=52.2325&amp;mlon=21.0072#map=12/52.2325/21.0072"
-                        target="_blank">Wyświetl większą mapę</a>
+                    <a class="openstreetmap-link" href="https://www.openstreetmap.org/?mlat=52.2325&amp;mlon=21.0072#map=12/52.2325/21.0072" target="_blank">Wyświetl większą mapę</a>
                 </div>
             </section>
             <section class="compulsory-files">

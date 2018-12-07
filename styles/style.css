@@ -267,7 +267,8 @@ main article .article-content .more-btn:hover{
 /* ----- STYLING THE BLOG PART OF THE SITE ----- */
 .blog{
     width: 90%;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
     text-align: justify;
     color: #000000;
 }
